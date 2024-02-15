@@ -19,6 +19,6 @@ const setandGetData=(e)=>{
     
 }
 
-
-formEl.addEventListener('submit',setandGetData)
-
+export function validated(){
+  formEl.addEventListener('submit',setandGetData)
+}

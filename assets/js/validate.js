@@ -1,8 +1,11 @@
 import JustValidate from "just-validate";
+import { validated } from './main.js'
 const formEl = document.querySelector("form");
 
 const justValidate = new JustValidate(formEl);
-
+const validateForm = new JustValidate(formEl,{
+    validateBeforeSubmitting:true
+  });
 justValidate
   .addField(
     "#firstname",
@@ -31,11 +34,11 @@ justValidate
       },
       {
         rule: "minLength",
-        value: 1,
+        value: 3,
       },
       {
         rule: "maxLength",
-        value: 2,
+        value: 15,
       },
     ],
     {
@@ -97,3 +100,7 @@ justValidate
         errorLabelCssClass: ["form-error"],
     }
   );
+
+  validateForm.onSuccess((e)=>{
+    validated();
+  })
