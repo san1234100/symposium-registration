@@ -10,13 +10,15 @@ const setandGetData=(e)=>{
     if(existingUserArr){
     existingUserArr.push(userData)
     localStorage.setItem(localStorageKey,JSON.stringify(existingUserArr))
-    console.log(existingUserArr);
+    // console.log(existingUserArr);
     } else{
       const newArr=[];
       newArr.push(userData);
       localStorage.setItem(localStorageKey,JSON.stringify(newArr))
     }
+    
 }
 
 
 formEl.addEventListener('submit',setandGetData)
+

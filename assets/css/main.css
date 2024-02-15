@@ -33,3 +33,6 @@
   .form-input{
     @apply bg-[#cafbee] text-midBlue outline-none px-4 py-2 rounded w-full;
   }
+  .form-error{
+   @apply text-sm pt-2; 
+  }
