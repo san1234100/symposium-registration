@@ -16,7 +16,7 @@ const setandGetData=(e)=>{
       newArr.push(userData);
       localStorage.setItem(localStorageKey,JSON.stringify(newArr))
     }
-    
+    formEl.reset();
 }
 
 export function validated(){

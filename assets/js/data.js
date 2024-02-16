@@ -53,7 +53,57 @@ function displayUserData(){
     tableEl.append(documentFragment);
 }
 
-console.log(userDataArr);
+// console.log(userDataArr);
 
 displayUserData()
 
+const idCardEl=document.getElementById('id-card');
+const cardDisplayEl=document.getElementById('cardDisplay')
+tableEl.addEventListener('click',(event)=>{
+    
+    if(event.target.textContent==='ID'){
+        idCardEl.innerHTML='';
+        cardDisplayEl.classList.toggle('hidden')
+        const parentEl=event.target.parentNode.parentNode;
+        // console.log(event.target.parentNode.parentNode);
+    const divEl=document.createElement('div');
+    divEl.className="bg-darkBlue rounded-xl h-56 flex items-center justify-center"
+    const imgEl=document.createElement('img');
+    imgEl.src=`https://ui-avatars.com/api/?name=${parentEl.children[1].textContent}&background=random&color=fff`
+    imgEl.classList.add('rounded-full','w-28','p-0.5');
+    divEl.append(imgEl);
+    
+    const div1El=document.createElement('div');
+    div1El.className="h-60 flex flex-col p-10 space-y-3";
+    const detailsArr=[parentEl.children[1].textContent,parentEl.children[3].textContent,parentEl.children[4].children[0].textContent,parentEl.children[4].children[1].textContent]
+    // console.log(detailsArr);
+    const detailsHeadingsArr=['Name : ','Dept : ','Contact : ','Email : ']
+    detailsArr.forEach((val,index)=>{
+        const spanEl=document.createElement('span');
+        spanEl.className="text-darkBlue font-semibold"
+        spanEl.textContent=detailsHeadingsArr[index]
+        const span1El=document.createElement('span');
+        span1El.className="text-midBlue"
+        span1El.textContent=val;
+        spanEl.appendChild(span1El);
+        div1El.append(spanEl);
+        // console.log(spanEl);
+    })
+    idCardEl.append(divEl,div1El);
+};
+})
+
+
+
+{/* <div class="max-w-xs rounded-xl bg-white mx-auto">
+<div class="bg-darkBlue rounded-xl h-56 flex items-center justify-center">
+  <img src="https://ui-avatars.com/api/?name=Monish&background=random&color=fff"
+  alt="Vignesh" class="rounded-full w-28 p-0.5">
+</div>
+<div class="h-60 flex flex-col p-10 space-y-3">
+  <span class="text-darkBlue font-semibold"> Name : <span class="text-midBlue">Monish G</span></span>
+  <span class="text-darkBlue font-semibold"> Dept : <span class="text-midBlue">CSE</span></span>
+  <span class="text-darkBlue font-semibold"> Contact : <span class="text-midBlue">656456546</span></span>
+  <span class="text-darkBlue font-semibold"> Email : <span class="text-midBlue">you@gmail.com</span></span>
+</div>
+</div> */}
