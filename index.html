@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/symposium-registration/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symposium Registration</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/symposium-registration/assets/index-CZiB8hTC.js"></script>
+    <link rel="stylesheet" crossorigin href="/symposium-registration/assets/index-tifkgjul.css">
+  </head>
+  <body class="bg-lightMidBlue">
+    <header class="bg-darkBlue px-10 py-5">
+      <div class="flex justify-between">
+        <a href="./index.html" class="text-white text-2xl font-semibold"
+          >College Symposium</a
+        >
+        <a
+          href="./registeredDetails.html"
+          class="bg-lightMidBlue poppins-medium text-darkBlue px-4 py-1 rounded"
+        >
+          Registered Details
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="bg-lightGrey rounded p-10 mt-28 mx-auto max-w-3xl">
+        <h1 class="text-darkBlue text-center text-2xl poppins-medium">
+          Register Form
+        </h1>
+        <form id="registerForm">
+          <!-- first name and last name -->
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <div>
+              <input
+                type="text"
+                placeholder="First Name"
+                name="firstname"
+                id="firstname"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="lastname"
+                id="lastname"
+                class="form-input"
+              />
+            </div>
+          </div>
+          <!-- email and contact -->
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <!-- Email -->
+            <div>
+              <input
+                type="email"
+                placeholder="you@gmail.com"
+                name="email"
+                id="email"
+                class="form-input"
+              />
+            </div>
+            <!-- Contact -->
+            <div>
+              <input
+                type="number"
+                placeholder="Mobile Number"
+                name="phNumber"
+                id="phNumber"
+                class="form-input"
+              />
+            </div>
+          </div>
+          <!-- Dept and gender -->
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <!-- Dept -->
+            <div>
+              <select name="dept" id="dept" class="form-input">
+                <option value="">-- Select your Dept --</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="MECH">MECH</option>
+                <option value="IT">IT</option>
+              </select>
+            </div>
+            <!-- Contact -->
+            <div class="flex items-center space-x-4">
+              <label for="male" class="text-lg text-darkBlue">
+                <input type="radio" class="accent-blue-500" value="male" name="gender" id="male" /> Male
+              </label>
+              <label for="female" class="text-lg text-darkBlue">
+                <input type="radio" class="accent-blue-500" value="female" name="gender" id="female" /> Female
+              </label>
+              <label for="others" class="text-lg text-darkBlue">
+                <input type="radio" class="accent-blue-500" value="others" name="gender" id="others" /> Others
+              </label>
+            </div>
+          </div>
+          <!-- College Name -->
+          <div class="my-4">
+            <input
+            type="text"
+            placeholder="College Name"
+            name="collegename"
+            id="collegename"
+            class="form-input"
+          />
+          </div>
+          <!-- button -->
+          <div>
+            <button class="px-4 py-2 poppins-semibold rounded w-full bg-darkBlue hover:bg-[#245984] text-white ">Register</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    
+  </body>
+</html>
