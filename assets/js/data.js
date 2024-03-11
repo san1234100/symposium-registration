@@ -70,9 +70,9 @@ tableEl.addEventListener('click',(event)=>{
     divEl.className="bg-darkBlue rounded-xl h-56 flex items-center justify-center"
     const imgEl=document.createElement('img');
     imgEl.src=`https://ui-avatars.com/api/?name=${parentEl.children[1].textContent}&background=random&color=fff`
-    imgEl.classList.add('rounded-full','w-28','p-0.5');
+    imgEl.classList.add('rounded-full','w-28','h-28','p-0.5');
     divEl.append(imgEl);
-    
+    console.log(divEl);
     const div1El=document.createElement('div');
     div1El.className="h-60 flex flex-col p-10 space-y-3";
     const detailsArr=[parentEl.children[1].textContent,parentEl.children[3].textContent,parentEl.children[4].children[0].textContent,parentEl.children[4].children[1].textContent]
@@ -90,6 +90,7 @@ tableEl.addEventListener('click',(event)=>{
         // console.log(spanEl);
     })
     idCardEl.append(divEl,div1El);
+    console.log(idCardEl);
 };
 })
 

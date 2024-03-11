@@ -4,6 +4,15 @@ This is a simple Symposium Registration System where candidates can register for
 
 ## Live-Link
 > https://san1234100.github.io/symposium-registration/
+
+## Screenshots
+- **ScreenShot1**
+![register form](./assets/images/Screenshot1.png)
+- **ScreenShot2**
+![registered data](./assets/images/Screenshot2.png)
+- **ScreenShot2**
+![ID Card](./assets/images/Screenshot3.png)
+
 ## Features
 
 - Register Candidates: Users can register for the symposium by providing their information.
@@ -16,7 +25,7 @@ This is a simple Symposium Registration System where candidates can register for
 - Tailwind CSS: For styling the UI components.
 - JavaScript: For interactivity and dynamic content.
 - JS DOM: For manipulating the HTML elements.
-- Local Storage: For storing registered candidates's    information locally.
+- Local Storage: For storing registered candidates's information locally.
 
 ## Usage
 
